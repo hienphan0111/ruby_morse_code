@@ -8,6 +8,7 @@ def decode_char(char)
   end
   return null
 end
+
 def decode (st) 
   arr = st.split("   ")
   str = ""
@@ -22,3 +23,7 @@ def decode (st)
   }
   return str
 end
+
+puts decode("-- -.--   -. .- -- .")
+
+puts decode(".-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...")
