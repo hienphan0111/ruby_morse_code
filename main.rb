@@ -5,3 +5,17 @@ def decode_char(char)
     return morse_code[char]
   end
 end
+def decode (st) 
+  arr = st.split("   ")
+  str = ""
+  arr.each { |item|
+    words = item.split(" ")
+    wd = ""
+    words.each { |char|
+      wd << decode_char(char)
+    }
+    str << " "
+    str << wd
+  }
+  return str
+end
