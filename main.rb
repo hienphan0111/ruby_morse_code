@@ -1,16 +1,17 @@
 def decode_char(char)
+  # rubocop:disable Layout/LineLength
+
   morse_code = {
     '.-' => 'A', '-...' => 'B', '-.-.' => 'C', '-..' => 'D', '.' => 'E', '..-.' => 'F', '--.' => 'G', '....' => 'H', '..' => 'I', '.---' => 'J', '-.-' => 'K', '.-..' => 'L', '--' => 'M', '-.' => 'N', '---' => 'O', '.--.' => 'P', '--.-' => 'Q', '.-.' => 'R', '...' => 'S', '-' => 'T', '..-' => 'U', '...-' => 'V', '.--' => 'W', '-..-' => 'X', '-.--' => 'Y', '--..' => 'Z', '.----' => '1', '..---' => '2', '...--' => '3', '....-' => '4', '.....' => '5', '-....' => '6', '--...' => '7', '---..' => '8', '----.' => '9', '-----' => '0'
   }
+ 
+  # rubocop:enable Layout/LineLength
 
-  if morse_code[char]
-    return morse_code[char]
-  end
+  return morse_code[char]
 
-  return null
 end
 
-def decode (str)
+def decode(str)
   arr = str.split('   ')
   result = ''
   arr.each do |item|
