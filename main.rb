@@ -14,7 +14,7 @@ def decode(str)
   arr = str.split('   ')
   result = ''
   arr.each do |item|
-    words = item.split()
+    words = item.split
     wd = ''
     words.each do |char|
       wd << decode_char(char)
